@@ -30,7 +30,7 @@ site.use(lightningCss({
 }));
 
 // automatically copy assets
-site.copy("assets");
+site.copy("assets", ".");
 
 //generate site maps
 site.use(sourceMaps());
