@@ -1,0 +1,79 @@
+/* Reset
+  ref: https://andy-bell.co.uk/a-modern-css-reset/
+  ref: https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+/* Use sensible box styling -- the width of the box should be the width of the box!
+  ref: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margins from everything */
+* {
+  margin: 0
+}
+
+/* Scroll when using in-page navigation (i.e. anchors) */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Improve text rendering and set some accessible font defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* use a different word wrap algorithm to avoid breaking narrow layouts */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Better media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Don't use the default form styling */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Kill animation if someone prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- End Reset ---- */
+

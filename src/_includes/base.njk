@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{{ title }}</title>
+    <meta name="description" content="Describe the page" />
+    <meta name="author" content="Author" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- normal icons -->
+    <link rel="icon" sizes="16x16 32x32 48x48" type="img/png" href="/images/icon.png" />
+
+    <!-- Safari icons -->
+    <!-- used when the page is added to iOS homescreen -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/touch-icon.png" />
+    <!-- used when the page is pinned in desktop Safari. Image must be a monochrome SVG, color fills the icon -->
+    <link rel="mask-icon" href="/images/mask-icon.svg" color="#000000"/>
+
+    <!-- feeds -->
+    <link rel="canonical" href="" />
+    <link rel="alternate" type="application/feed+json" href="/feed.json" title="" />
+
+    <link rel="manifest" href="/manifest.json" />
+  </head>
+
+  <body>
+
+    <header>
+
+    </header>
+
+    <main>
+
+      <section>
+        <header></header>
+        <article>
+          {{ content | safe }}
+        </article>
+      </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+  <!-- uncomment below to add any scripts -->
+  <!-- <script defer src="js/index.js"></script> -->
+  </body>
+</html>
+
