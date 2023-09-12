@@ -1,5 +1,6 @@
 import lume from "lume/mod.ts";
 import lightningCss, { version } from "lume/plugins/lightningcss.ts";
+import sourceMaps from "lume/plugins/source_maps.ts";
 
 const site = lume({
   src: "./src",
@@ -30,5 +31,8 @@ site.use(lightningCss({
 
 // automatically copy assets
 site.copy("assets");
+
+//generate site maps
+site.use(sourceMaps());
 
 export default site;
